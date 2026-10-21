@@ -8,7 +8,6 @@ This repository uses the [php-stubs](https://github.com/php-stubs) to:
 Stub packages:
 
 - [php-stubs/wordpress-stubs](https://github.com/php-stubs/wordpress-stubs)
-- [php-stubs/wordpress-globals](https://github.com/php-stubs/wordpress-globals)
 - [php-stubs/woocommerce-stubs](https://github.com/php-stubs/woocommerce-stubs)
 - [php-stubs/wp-cli-stubs](https://github.com/php-stubs/wp-cli-stubs)
 
@@ -36,7 +35,6 @@ Or load only what you need
 {
   "autoload-dev": {
     "files": [
-      "vendor/kallookoo/wp-stubs/stubs/wordpress-globals.php",
       "vendor/kallookoo/wp-stubs/stubs/wordpress-stubs.php"
     ]
   }

@@ -9,7 +9,6 @@ $directory = __DIR__ . '/stubs';
 $packages  = array(
 	'woocommerce-packages-stubs' => 'php-stubs/woocommerce-stubs',
 	'woocommerce-stubs'          => 'php-stubs/woocommerce-stubs',
-	'wordpress-globals'          => 'php-stubs/wordpress-globals',
 	'wordpress-stubs'            => 'php-stubs/wordpress-stubs',
 	'wp-cli-commands-stubs'      => 'php-stubs/wp-cli-stubs',
 	'wp-cli-i18n-stubs'          => 'php-stubs/wp-cli-stubs',
