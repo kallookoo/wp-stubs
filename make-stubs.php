@@ -1,0 +1,35 @@
+<?php
+/**
+ * Make Stubs
+ *
+ * @package vscode-wp-stubs
+ */
+
+$directory = __DIR__ . '/stubs';
+$packages  = array(
+	'woocommerce-packages-stubs' => 'php-stubs/woocommerce-stubs',
+	'woocommerce-stubs'          => 'php-stubs/woocommerce-stubs',
+	'wordpress-globals'          => 'php-stubs/wordpress-globals',
+	'wordpress-stubs'            => 'php-stubs/wordpress-stubs',
+	'wp-cli-commands-stubs'      => 'php-stubs/wp-cli-stubs',
+	'wp-cli-i18n-stubs'          => 'php-stubs/wp-cli-stubs',
+	'wp-cli-stubs'               => 'php-stubs/wp-cli-stubs',
+);
+
+if ( ! is_dir( $directory ) ) {
+	mkdir( $directory ); // phpcs:ignore
+}
+
+$content = array( '<?php' );
+foreach ( $packages as $basename => $package_dir ) {
+	$filename = __DIR__ . "/vendor/{$package_dir}/{$basename}.php";
+	if ( is_readable( $filename ) ) {
+		copy( $filename, "{$directory}/{$basename}.php" );
+		$output = file_get_contents( $filename ); // phpcs:ignore
+		if ( is_string( $output ) ) {
+			// Clean the PHP tags.
+			$content[] = preg_replace( array( '/^\s*<\?php/i', '/\?>\s*$/i' ), '', $output );
+		}
+	}
+}
+file_put_contents( __DIR__ . '/stubs.php', implode( PHP_EOL, $content ) ); // phpcs:ignore
