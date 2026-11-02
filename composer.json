@@ -1,10 +1,11 @@
 {
   "name": "kallookoo/wp-stubs",
-  "description": "WordPress and WooCommerce stubs for PHP",
+  "description": "PHP stubs for the WordPress ecosystem",
   "homepage": "https://github.com/kallookoo/wp-stubs",
   "license": "MIT",
   "require-dev": {
     "php-stubs/wordpress-stubs": ">=7.0",
+    "php-stubs/wordpress-globals": "^0.2.0",
     "php-stubs/woocommerce-stubs": ">=11.0",
     "php-stubs/wp-cli-stubs": "dev-master"
   },
